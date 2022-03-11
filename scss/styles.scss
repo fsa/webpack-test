@@ -1,0 +1,12 @@
+h1 {
+    color: red;
+    border-radius: 1pt;
+}
+
+h1 {
+    background-color: yellow;
+    
+    &.test {
+        color: green;
+    }
+}
