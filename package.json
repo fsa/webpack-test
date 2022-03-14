@@ -2,10 +2,9 @@
   "name": "webpack-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
-    "build": "webpack --config build/webpack.build.conf.js"
+    "dev": "webpack-dev-server --config webpack.dev.conf.js",
+    "build": "webpack --config webpack.build.conf.js"
   },
   "browserslist": [
     "> 1%",

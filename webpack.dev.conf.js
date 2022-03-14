@@ -10,9 +10,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         port: 3000
     },
     plugins: [
-        new webpack.SourceMapDevToolPlugin({
-            filename: "[name].map",
-        }),
+        //new webpack.SourceMapDevToolPlugin({
+        //    filename: "[name][ext].map",
+        //}),
     ],
 });
 
