@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+    mode: 'production',
     module: {
         rules: [
             {
@@ -45,11 +46,6 @@ module.exports = {
     },
     plugins: [
         //new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin(),
-        new HtmlWebpackPlugin({
-            title: "Custom template",
-            // Load a custom template (lodash by default)
-            template: "src/index.html",
-        }),
+        new MiniCssExtractPlugin()
     ],
 };
