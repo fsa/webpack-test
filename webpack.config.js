@@ -3,45 +3,35 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    mode: 'production',
+    mode: "production",
+    entry: {
+        main: "./src/index.js",
+    },
     module: {
         rules: [
+            {
+                test: /\.(js)$/,
+                exclude: /node_modules/,
+                use: "babel-loader",
+            },
             {
                 test: /\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    {
-                        loader: "css-loader",
-                        options: {
-                            importLoaders: 1,
-                        },
-                    },
-                    {
-                        loader: "postcss-loader",
-                    },
+                    "css-loader",
+                    "postcss-loader",
                 ],
             },
             {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    {
-                        loader: "css-loader",
-                        options: {
-                            importLoaders: 1,
-                        },
-                    },
-                    {
-                        loader: "postcss-loader",
-                    },
-                    {
-                        loader: "sass-loader",
-                    },
+                    "css-loader",
+                    "postcss-loader",
+                    "sass-loader",
                 ],
             },
         ],
     },
-    plugins: [
-        new MiniCssExtractPlugin()
-    ],
+    plugins: [new MiniCssExtractPlugin()],
 };
